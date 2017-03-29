@@ -1,5 +1,8 @@
 // Programm, welches mit Hilfe von climits die Größe der Variablen tabellarisch ausgibt.
 // iomanip wird verwendet um einzelne Stellen einzurücken
+// Tatsächlich definiert sich Byte nicht automatisch mit 8 bits (i.d.R schon) jedoch ist mit Byte die Länge des Chars gemeint.
+// welcher aber i.d.R aus 8 bits besteht. 
+// 4 Bedeutet zb. also das 4-fach der länge von Char, was 4 Byte bedeutet bei einem Compiler der 8 bit für einen Char vorsieht.
 
 #include <iostream>
 #include <climits>
