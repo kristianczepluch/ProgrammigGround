@@ -1,5 +1,5 @@
 //Bjarne Stroustrup Einführung in die Programmierung mit C++
-// Kapitel 4, S.154 11
+// Kapitel 4, S.154 12
 // Programm welches einem die Primzahlen in einem vom Benutzer definierten Bereich ausgibt (maximum in diesem fall 1000)
 
 #include <iostream>
