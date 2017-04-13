@@ -8,35 +8,10 @@
 
 int main() {
 
-	int i;
-	int ii;
-	int eingabe;
-
-	std::cout << "Bis zur welchser Zahl möchten sie die Primzahlen berechnen lassen? " << std::endl;
-	std::cin >> eingabe;
-
-	vector<int> numbers;
-	for (int i = 2; i < eingabe+1; i++) {
-		numbers.push_back(i);
+	vector<bool> gestrichen;
+	for (int i = 0; i < 101; i++) {
+		gestrichen.push_back(false);
 	}
-
-	for (i = 0; i < numbers.size(); i++) {
-		for (ii = 1; ii < numbers.size(); ++ii) {
-			if(numbers[i]==0){ }
-			else if(numbers[ii]==numbers[i]){ }
-			else if (numbers[ii] % numbers[i] == 0) {
-				numbers[ii] = 0;
-			}
-		}
-	}
-
-	for (int i = 0; i < numbers.size(); i++) {
-		if (numbers[i] != 0) {
-			std::cout << numbers[i] << " ";
-			Sleep(100);
-		}
-	}
-
 
 
 	keep_window_open();
