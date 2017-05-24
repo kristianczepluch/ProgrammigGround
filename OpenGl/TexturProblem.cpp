@@ -25,7 +25,7 @@ int main()
 
 	ShaderObject shader2("../../../../../Documents/Visual Studio 2017/Projects/LearningOpenGl/LearningOpenGl/VertexShader2.vert", "../../../../../Documents/Visual Studio 2017/Projects/LearningOpenGl/LearningOpenGl/FragmentShader2.frag");
 
-	// Creating the second Shader for the Flag //
+	// Creating the second Shader for the Wing //
 
 	ShaderObject shader3("../../../../../Documents/Visual Studio 2017/Projects/LearningOpenGl/LearningOpenGl/VertexShader3.vert", "../../../../../Documents/Visual Studio 2017/Projects/LearningOpenGl/LearningOpenGl/FragmentShader3.frag");
 
@@ -35,7 +35,7 @@ int main()
 	GLfloat vertices[] = {
 		// Positions                                 // Colors                         // Texture Coordinates (invertet by y axis cuz png)
 		0.0f, 0.5f, 0.0f,   /** Spitze       0 */    1.0f,0.0f,0.0f,  /** Rot */        0.5f,0.0f,
-		-0.5f, 0.0f, 0.0f,   /** Oben Links   1 */    0.0f,1.0f,0.0f,  /** Grün */       0.0f,0.5f,
+		-0.5f, 0.0f, 0.0f,   /** Oben Links   1 */    0.0f,1.0f,0.0f,  /** GrÃ¼n */       0.0f,0.5f,
 		0.5f, 0.0f, 0.0f,   /** Oben Rechts  2 */    0.0f,0.0f,1.0f,  /** Blau */       1.0f,0.5f,
 		-0.5f,-1.0f, 0.0f,   /** Unten Links  3 */    1.0f,1.0f,0.0f,  /** Gelb */       0.0f,1.0f,
 		0.5f,-1.0f, 0.0f    /** Unten Rechts 4 */   ,0.0f,1.0f,1.0f,  /** Cyan */       1.0f,1.0f
@@ -199,7 +199,7 @@ int main()
 		
 		// Draw the HOUSE VAO
 		shader.use();
-		glBindTexture(GL_TEXTURE_2D, texture); // Benutz die scheiß textur für den shader des nächsten render calls
+		glBindTexture(GL_TEXTURE_2D, texture); // Benutz die scheiÃŸ textur fÃ¼r den shader des nÃ¤chsten render calls
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, 0);
 		glBindTexture(GL_TEXTURE_2D, 0);
@@ -213,7 +213,7 @@ int main()
 
 		//Draw the Wing VAO with the third shader
 		shader3.use();
-		glBindTexture(GL_TEXTURE_2D, texture2); // Für 1 macht er es aber 2 und 3 haben beide die letzte textur xD
+		glBindTexture(GL_TEXTURE_2D, texture2); // FÃ¼r 1 macht er es aber 2 und 3 haben beide die letzte textur xD
 		glBindVertexArray(VAO2);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
