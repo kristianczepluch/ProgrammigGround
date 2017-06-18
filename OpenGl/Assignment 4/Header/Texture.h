@@ -7,5 +7,6 @@ public:
 	Texture(const GLchar* imagePath);
 	void bind();
 	void unbind();
+	GLuint getProgram();
 	~Texture();
 };

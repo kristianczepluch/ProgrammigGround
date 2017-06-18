@@ -5,7 +5,7 @@
 
 
 
-Texture::Texture(const GLchar* imagePath){
+Texture::Texture(const GLchar* imagePath) {
 	glGenTextures(1, &ID);
 	glBindTexture(GL_TEXTURE_2D, ID);
 	// Setting up the texture
@@ -38,5 +38,9 @@ void Texture::unbind() {
 	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
-Texture::~Texture(){
+GLuint Texture::getProgram() {
+	return ID;
+}
+
+Texture::~Texture() {
 }
